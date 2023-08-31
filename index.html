@@ -5,11 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard Project</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
     <div class="container">
-      <div class="sidebar"></div>
-      <div class="header"></div>
+      <div class="sidebar">
+        <div class="logo">
+          <a class="dashboard" href="#"
+            ><span class="material-symbols-outlined"> dashboard </span>
+            Dashboard</a
+          >
+        </div>
+
+        <div class="first-menu">
+          <a class="home" href="#"
+            ><span class="material-symbols-outlined"> home </span> Home</a
+          >
+
+          <a class="profile" href="#"
+            ><span class="material-symbols-outlined"> person </span> Profile</a
+          >
+          <a class="messages" href="#"
+            ><span class="material-symbols-outlined"> mail </span> Messages</a
+          ><a class="history" href="#"
+            ><span class="material-symbols-outlined"> history </span>History</a
+          >
+          <a class="tasks" href="#"
+            ><span class="material-symbols-outlined"> task </span> Tasks</a
+          ><a class="communities" href="#"
+            ><span class="material-symbols-outlined"> groups </span>
+            Communities</a
+          >
+        </div>
+
+        <div class="second-menu">
+          <a class="settings" href="#"
+            ><span class="material-symbols-outlined"> settings </span>
+            Settings</a
+          ><a class="support" href="#"
+            ><span class="material-symbols-outlined"> help </span> Support</a
+          ><a class="privacy" href="#"
+            ><span class="material-symbols-outlined"> verified_user </span>
+            Privacy</a
+          >
+        </div>
+      </div>
+
+      <div class="header">
+        <div class="1">
+          <label for="search"
+            ><span class="material-symbols-outlined"> search </span></label
+          >
+          <input type="search" name="search" id="search" />
+        </div>
+        <div class="2">
+          <span class="material-symbols-outlined"> notifications_active </span>
+          <span class="material-symbols-outlined"> account_circle </span>
+          <span>Morgan Oakley</span>
+        </div>
+        <div class="3">
+          <span class="material-symbols-outlined"> account_circle </span>
+          <p>Hi there,</p>
+          <p>Morgan Oakley(@morgan)</p>
+        </div>
+        <div class="4">
+          <button>New</button><button>Upload</button><button>Share</button>
+        </div>
+      </div>
       <div class="main-content"></div>
     </div>
   </body>
