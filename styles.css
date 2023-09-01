@@ -71,21 +71,37 @@
   grid-auto-flow: column;
   gap: 5px;
 }
-
+/************************************HEADER************************************/
 .header {
+  padding: 20px 35px;
   grid-area: header;
   display: grid;
   grid-template: 1fr 2fr / 3fr 1fr;
+  grid-template-areas:
+    'search   login'
+    'greeting buttons';
+  grid-row-gap: 10px;
 }
 
-/*TODO border none when active*/
+.search-bar {
+  grid-area: search;
+  display: grid;
+  grid-template-columns: 1fr 16fr;
+  place-content: center;
+  justify-items: start;
+  align-items: center;
+}
+
+.search-bar > label {
+  justify-self: start;
+}
 input {
-  appearance: none;
+  outline: none;
   border: none;
   border-radius: 10px;
   background-color: lightgray;
   height: 1.4rem;
-  width: 80%;
+  width: 100%;
 }
 
 input:active,
@@ -94,6 +110,50 @@ input:focus-within {
   border: none;
 }
 
+.login {
+  grid-area: login;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 30px;
+}
+
+.greeting-profile {
+  grid-area: greeting;
+  display: grid;
+  grid-template: 1fr 1fr / 10% auto;
+  grid-template-areas:
+    'img hi'
+    'img user';
+  justify-content: start;
+  align-items: end;
+}
+
+.greeting-profile .img {
+  grid-area: img;
+  font-size: 58px;
+}
+
+.greeting-profile h2 {
+  align-self: start;
+}
+.buttons {
+  grid-area: buttons;
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: #1992d4;
+  color: #fff;
+  font-weight: 600;
+}
+/*********************************MAIN-CONTENT*********************************/
 .main-content {
   grid-area: main;
   background-color: #d7e4e8;
